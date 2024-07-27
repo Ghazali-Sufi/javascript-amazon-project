@@ -1,3 +1,5 @@
+import {cart} from '../data/cart.js'
+
 let productHTML = "";
 
 products.forEach((product) => {
@@ -25,7 +27,7 @@ products.forEach((product) => {
           </div>
 
           <div class="product-quantity-container">
-            <select>
+            <select class="cart-quantity-selector-${product.id}">
               <option selected value="1">1</option>
               <option value="2">2</option>
               <option value="3">3</option>
@@ -41,7 +43,7 @@ products.forEach((product) => {
 
           <div class="product-spacer"></div>
 
-          <div class="added-to-cart">
+          <div class="added-to-cart js-added-to-cart-${product.id}">
             <img src="images/icons/checkmark.png">
             Added
           </div>
@@ -59,22 +61,46 @@ document.querySelector(".products-grid").innerHTML = productHTML;
 const cartButton = document.querySelectorAll(".add-to-cart-button");
 
 cartButton.forEach((button) => {
+  let addedMessageTimeoutId;
   button.addEventListener("click", () => {
     const productId = button.dataset.productId;
+
+    const selectorQuantity = document.querySelector(
+      `.cart-quantity-selector-${productId}`
+    );
+    const quantity = Number(selectorQuantity.value);
+
     let matchingItem;
     cart.forEach((item) => {
       if (productId === item.productId) {
         matchingItem = item;
       }
     });
+
     if (matchingItem) {
       matchingItem.quantity++;
     } else {
       cart.push({
         productId: productId,
-        quantity: 1,
+        quantity: quantity,
       });
     }
+
+    const addedMessage = document.querySelector(
+      `.js-added-to-cart-${productId}`
+    );
+    addedMessage.classList.add("added-to-cart-visible");
+
+    setTimeout(() => {
+      if (addedMessageTimeoutId) {
+        clearTimeout(addedMessageTimeoutId);
+      }
+      const timeoutId = setTimeout(() => {
+        addedMessage.classList.remove("added-to-cart-visible");
+      }, 2000);
+
+      addedMessageTimeoutId = timeoutId;
+    });
 
     let cartQuantity = 0;
     cart.forEach((item) => {
