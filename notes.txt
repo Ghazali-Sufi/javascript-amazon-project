@@ -2,3 +2,6 @@ Git: Track changes in our code
 Repository: a folder where changes are being tracked
 
 Data attribute: is an html attribute, allows us to attach any information to an element
+
+
+
