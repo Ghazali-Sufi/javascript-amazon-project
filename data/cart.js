@@ -82,7 +82,7 @@ export function updateDeliveryOption(productId, deliveryOptionId) {
     }
   });
 
-  matchingItem.id = deliveryOptionId;
+  matchingItem.deliveryOptionId = deliveryOptionId;
 
   saveToStorage();
 }
