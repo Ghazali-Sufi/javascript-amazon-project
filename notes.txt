@@ -3,5 +3,12 @@ Repository: a folder where changes are being tracked
 
 Data attribute: is an html attribute, allows us to attach any information to an element
 
+Model: saves and manages the Data, so all the code in data folder is called the model, because that codes saves and manages our data 
 
+View: The code that takes the data and displays it on the page, it's a code that takes our data form the data folder/database and then generates all the html
 
+Controller: runs some code when we interact some page, like event listeners, because they do something when we interact the page or with the view
+
+First we use the model to generate the view, then when we interact with the view it will run the controller, then the controller will update the model 
+
+MVC is a way to organize and design our code
