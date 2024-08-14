@@ -3,7 +3,7 @@ Repository: a folder where changes are being tracked
 
 Data attribute: is an html attribute, allows us to attach any information to an element
 
-External Libraries: code outside of our project
+External Libraries: code outside of our project that someone else wrote
 
 Model: saves and manages the Data, so all the code in data folder is called the model, because that codes saves and manages our data 
 
@@ -18,3 +18,5 @@ MVC is a way to organize and design our code
 Automated Testing: is using code to test code
 
 Taste suite(suwiit): a group of related tests
+
+Testing Framework: is an external library that helps us write tests easier
