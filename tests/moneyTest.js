@@ -3,6 +3,9 @@ import { formatCurrency } from "../scripts/utils/money.js";
 // These are called test cases, so we have 3 test cases
 console.log('Tase suite: formatCureency');
 
+console.log('converts cents into dollars');
+
+
 if (formatCurrency(2095) === "20.95") {
   console.log("Passed!");
 } else {
