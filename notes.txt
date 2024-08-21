@@ -27,3 +27,8 @@ Flaky Test: is a test that sometimes passes and sometimes fails
 
 Mocks: Lets us replace a method with a fake version
 
+Unit Tests: testing single function => Testing one piece of the code 
+
+Integration Tests: testing a whole page or part of the page => tests many units/pieces of code working together
+
+Hook: let us run some code for each test
