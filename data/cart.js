@@ -32,7 +32,14 @@ export function addToCart(productId) {
   const selectorQuantity = document.querySelector(
     `.cart-quantity-selector-${productId}`
   );
-  const quantity = Number(selectorQuantity.value);
+
+  let quantity;
+  if (selectorQuantity === null) {
+    quantity = 1;
+  } else {
+    quantity = Number(selectorQuantity.value);
+  }
+  
 
   let matchingItem;
   cart.forEach((cartItem) => {

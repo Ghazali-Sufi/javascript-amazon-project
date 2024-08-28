@@ -32,3 +32,10 @@ Unit Tests: testing single function => Testing one piece of the code
 Integration Tests: testing a whole page or part of the page => tests many units/pieces of code working together
 
 Hook: let us run some code for each test
+
+Object Oriented Programming(OOP): organizing our code into objects, we put everything together into an object 
+
+Procedural Programming: a set of step-by-step instructions, we organize our code into separate functions
+
+Method: a function that is inside an object
+
