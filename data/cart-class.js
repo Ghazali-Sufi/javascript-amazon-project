@@ -2,19 +2,20 @@ import { validDeliveryOption } from "./deliveryOptions.js";
 
 class Cart {
   cartItems;
-  localStorageKey;
+//   this is a private property
+  #localStorageKey;
 
   //constructor will run automatically, we will place our setup code
   //   after we create an object, it will run the code in the constructor and setup the object
   constructor(localStorageKey) {
     // 'this' points to the object that we create
-    this.localStorageKey = localStorageKey;
+    this.#localStorageKey = localStorageKey;
     // we need to run this function at least once
-    this.loadFromStorage();
+    this.#loadFromStorage();
   }
 
-  loadFromStorage() {
-    this.cartItems = JSON.parse(localStorage.getItem(this.localStorageKey));
+  #loadFromStorage() {
+    this.cartItems = JSON.parse(localStorage.getItem(this.#localStorageKey));
     if (!this.cartItems) {
       this.cartItems = [
         {
@@ -33,7 +34,7 @@ class Cart {
 
   saveToStorage() {
     // it will convert the cart into a string and save it into localstorage
-    localStorage.setItem(this.localStorageKey, JSON.stringify(this.cartItems));
+    localStorage.setItem(this.#localStorageKey, JSON.stringify(this.cartItems));
   }
 
   addToCart(productId) {
@@ -124,6 +125,7 @@ class Cart {
 // each object that we generate from a class is called Instnace of the class
 const cart = new Cart("cart-oop");
 const businessCart = new Cart("cart-business");
+
 
 console.log("cart", cart);
 console.log("business cart", businessCart);
