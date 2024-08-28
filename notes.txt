@@ -39,3 +39,5 @@ Procedural Programming: a set of step-by-step instructions, we organize our code
 
 Method: a function that is inside an object
 
+Class: is specifically designed for generating objects, and is basically an object generator
+
