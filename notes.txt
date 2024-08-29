@@ -41,3 +41,6 @@ Method: a function that is inside an object
 
 Class: is specifically designed for generating objects, and is basically an object generator
 
+Inheritance: lets us reuse code between classes
+
+Polymorphism: use a method without knowing the class, so the class will determine what this method does
