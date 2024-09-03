@@ -6,12 +6,12 @@ export function getProduct(productId) {
     if (product.id === productId) {
       matchingProduct = product;
     }
-  });
+  }); 
 
   return matchingProduct;
 }
 
-class Product {
+export class Product {
   id;
   image;
   name;
@@ -26,7 +26,7 @@ class Product {
     this.priceCents = productDetails.priceCents;
   }
 
-  getStartsUrl() {
+  getStarsUrl() {
     return `images/ratings/rating-${this.rating.stars * 10}.png`;
   }
 
@@ -40,7 +40,7 @@ class Product {
 }
 
 // This class inherits all the properties and methods of Product class
-class Clothing extends Product {
+export class Clothing extends Product {
   sizeChartLink;
 
   constructor(productDetails) {
@@ -55,7 +55,7 @@ class Clothing extends Product {
   }
 }
 
-class Appliance extends Product {
+export class Appliance extends Product {
   instructionsLink;
   warrantyLink;
 
