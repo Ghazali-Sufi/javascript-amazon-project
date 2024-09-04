@@ -44,3 +44,7 @@ Class: is specifically designed for generating objects, and is basically an obje
 Inheritance: lets us reuse code between classes
 
 Polymorphism: use a method without knowing the class, so the class will determine what this method does
+
+XMLHttpRequest: is a class used to send an Http message
+
+asynchronous code: means it doesn't wait a line of code to finish, it just sends the request
