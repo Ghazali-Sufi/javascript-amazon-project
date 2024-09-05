@@ -1,3 +1,18 @@
+Objects: group related values together
+
+We use JSON When we send data between computers, when we store data
+JSON does not support functions
+stringfy(): is a method of the json object, so it's a function that is saved inside JSON object
+            convert object to json
+parse(): convert json to object
+
+Array => Another type of value, and it represents a list of values
+
+Asynchronous code: Computer will not wait for a line to finish before going to the next line.
+Synchronous code: Computer will wait for a line to finish before going to the next line.
+
+regular function has Hoisting, means we can call this function before we create it and we don't have to worry about which order we write the code 
+
 Git: Track changes in our code
 Repository: a folder where changes are being tracked
 
@@ -48,3 +63,5 @@ Polymorphism: use a method without knowing the class, so the class will determin
 XMLHttpRequest: is a class used to send an Http message
 
 asynchronous code: means it doesn't wait a line of code to finish, it just sends the request
+
+Anonymous function: function without a name
