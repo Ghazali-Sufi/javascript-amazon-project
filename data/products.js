@@ -1,7 +1,5 @@
 import { formatCurrency } from "../scripts/utils/money.js";
 
-
-
 export function getProduct(productId) {
   let matchingProduct;
   products.forEach((product) => {
@@ -94,16 +92,13 @@ export function loadProducts(fun) {
       }
       return new Product(productDetails);
     });
-    console.log('load products');
-    
-    fun()
+    console.log("load products");
+    fun();
   });
 
   xhr.open("GET", "https://supersimplebackend.dev/products");
   xhr.send();
 }
-
-loadProducts();
 
 /*
 export const products = [

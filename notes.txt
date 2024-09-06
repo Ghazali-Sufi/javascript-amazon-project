@@ -65,3 +65,5 @@ XMLHttpRequest: is a class used to send an Http message
 asynchronous code: means it doesn't wait a line of code to finish, it just sends the request
 
 Anonymous function: function without a name
+
+promises: let us wait for some asynchronous code to finish before going to the next step
