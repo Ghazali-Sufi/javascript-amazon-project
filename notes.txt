@@ -67,3 +67,5 @@ asynchronous code: means it doesn't wait a line of code to finish, it just sends
 Anonymous function: function without a name
 
 promises: let us wait for some asynchronous code to finish before going to the next step
+
+fetch: better way to make HTTP requests
