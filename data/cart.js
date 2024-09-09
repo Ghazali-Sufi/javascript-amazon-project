@@ -39,7 +39,6 @@ export function addToCart(productId) {
   } else {
     quantity = Number(selectorQuantity.value);
   }
-  
 
   let matchingItem;
   cart.forEach((cartItem) => {
@@ -113,12 +112,23 @@ export function updateDeliveryOption(productId, deliveryOptionId) {
   saveToStorage();
 }
 
+// export function loadCart() {
+//   const promise = fetch("https://supersimplebackend.dev/cart")
+//     .then((response) => {
+//       return response;
+//     })
+//     .then((cartData) => {
+//       console.log(cartData);
+//     });
+
+//   return promise;
+// }
 
 export function loadCart(fun) {
   const xhr = new XMLHttpRequest();
 
   xhr.addEventListener("load", () => {
-    
+
     console.log(xhr.response);
     fun();
   });

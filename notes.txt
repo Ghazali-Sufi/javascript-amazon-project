@@ -69,3 +69,9 @@ Anonymous function: function without a name
 promises: let us wait for some asynchronous code to finish before going to the next step
 
 fetch: better way to make HTTP requests
+
+Asyn Await: even a better way to handle asynchronous code, it's a shortcut for promises
+async: makes a function return a promise
+await: let's us wait for a promise to finish, before going to the next line.
+
+Note: we can only use await when we are inside an async function
