@@ -8,13 +8,18 @@ import { loadCart } from "../data/cart.js";
 // import '../data/backend-practice.js'
 
 async function loadPage() {
-  await loadProductsFetch();
-  
-  await new Promise((resolve) => {
-    loadCart(() => {
-      resolve();
+  try {
+    // we can manually create error
+    // throw "error1";
+    await loadProductsFetch();
+    await new Promise((resolve) => {
+      loadCart(() => {
+        resolve();
+      });
     });
-  });
+  } catch (error) {
+    console.log("Unexoected error. Please try again later.", error);
+  }
 
   renderCheckoutHeader();
   renderOrderSummary();
@@ -22,8 +27,6 @@ async function loadPage() {
 }
 
 loadPage();
-
-
 
 /*
 Promise.all([
