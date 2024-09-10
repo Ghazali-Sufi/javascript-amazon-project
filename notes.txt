@@ -76,3 +76,5 @@ await: let's us wait for a promise to finish, before going to the next line.
 
 Note: we can only use await when we are inside an async function
 Note: we only use try catch unexpected errors or errors outside of our control
+
+URL parameters: let us save data directly in the url
